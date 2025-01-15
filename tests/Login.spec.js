@@ -45,7 +45,7 @@ test('Login with invalid password', async ({page}) =>{
 
 });
 
-test('Login with invalid password', async ({page}) =>{
+test('Login with valid username but invalid password', async ({page}) =>{
     await page.goto('https://www.saucedemo.com/')
     await page.locator('#user-name').fill('standard555');
     await page.locator('#password').fill('secret111');
