@@ -31,7 +31,7 @@ test('Login with invalid user name and password', async ({page}) =>{
     await page.locator('#password').fill('secret111');
     await page.locator('#login-button').click(); 
     await expect(page.getByText('Epic sadface: Username and password do not match any user in this service')).toBeVisible();
-    await page.waitForTimeout(5000);
+    await page.waitForTimeout(6000);
 
 });
 
