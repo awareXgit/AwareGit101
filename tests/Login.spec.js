@@ -51,6 +51,5 @@ test('Login successfully to web', async ({page}) =>{
     await page.locator('#user-name').fill('standard_user');
     await page.locator('#password').fill('secret_sauce');
     await page.locator('#login-button').click(); 
-    // Add assertion for successful login, for example:
     await expect(page.locator('.inventory_list')).toBeVisible(); // Assuming the user is redirected to a page with inventory list after login
 });
