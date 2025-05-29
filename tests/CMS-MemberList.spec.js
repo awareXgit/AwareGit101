@@ -29,6 +29,9 @@ test('Verify Memberlist Search', async ({page}) =>{
     await page.click('span.nav-link-text:has-text("Member")');
     await page.click('text=Member List');
     await page.locator('#dt-search-0').fill('70501243');
+    const rowWithLoyaltyId = page.locator('table tbody tr', { hasText: '70501243' });
+    await expect(rowWithLoyaltyId).toBeVisible();
+
     });
 
 test('Verify Memberlist ExportFile', async ({page}) =>{
