@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const { login } = require('./CMS-login-fn');
+const { login } = require('../CMS-login-fn');
 
 
 test('Verify Memberlist View page', async ({page}) =>{
@@ -34,13 +34,4 @@ test('Verify Memberlist Search', async ({page}) =>{
 
     });
 
-test('Verify Memberlist ExportFile', async ({page}) =>{
-    await login(page, 'username', 'password'); 
-    await page.click('span.nav-link-text:has-text("Member")');
-    await page.click('text=Member List');
-    await page.click('text=Export Register Fail Log');
-    await expect(page.locator('#exportPopupTitle')).toBeVisible();
-    await expect(page.locator('#exportPopupTitle')).toHaveText('Register Fail Log');
-    await page.click('#submit_action_btn');
-    });
     

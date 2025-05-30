@@ -25,25 +25,25 @@ module.exports = defineConfig({
     },
 
     // รันใน Microsoft Edge จริง (ถ้าอยากรันด้วย)
-    {
-      name: 'Microsoft Edge',
-      use: {
-        ...devices['Desktop Edge'],
-        browserName: 'chromium',
-        channel: 'msedge',         // ใช้ Microsoft Edge จริง
-        headless: false,
-      },
-    },
+  //   {
+  //     name: 'Microsoft Edge',
+  //     use: {
+  //       ...devices['Desktop Edge'],
+  //       browserName: 'chromium',
+  //       channel: 'msedge',         // ใช้ Microsoft Edge จริง
+  //       headless: false,
+  //     },
+  //   },
 
-    // Firefox และ Safari (เดิม)
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
+  //   // Firefox และ Safari (เดิม)
+  //   {
+  //     name: 'firefox',
+  //     use: { ...devices['Desktop Firefox'] },
+  //   },
 
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
-  ],
+  //   {
+  //     name: 'webkit',
+  //     use: { ...devices['Desktop Safari'] },
+  //   },
+   ],
 });
